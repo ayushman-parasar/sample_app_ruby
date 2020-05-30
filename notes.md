@@ -27,3 +27,22 @@ end
 ***says*** “Let’s test the Home page by issuing a GET request to the Static Pages
 home URL and then making sure we receive a ‘success’ status code  (200 code) in re-
 sponse.”
+
+
+To include stylesheets we use a function call
+```
+stylesheet_link_tag 'application', media:'all', 'data-turbolinks-track':'reload'
+
+```
+***same as***
+
+```
+stylesheet_link_tag('application', media:'all', 'data-turbolinks-track':'reload')
+
+```
+***same as***
+```
+stylesheet_link_tag('application', {media:'all', 'data-turbolinks-track':'reload'})
+
+```
+***NOTE: when hashes are last argument parenthesis are optional*** 
