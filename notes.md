@@ -27,3 +27,25 @@ end
 ***says*** “Let’s test the Home page by issuing a GET request to the Static Pages
 home URL and then making sure we receive a ‘success’ status code  (200 code) in re-
 sponse.”
+
+
+To include stylesheets we use a function call
+```
+<%= stylesheet_link_tag 'application', media:'all', 'data-turbolinks-track':'reload' %>
+
+```
+***same as***
+
+```
+<%= stylesheet_link_tag('application', media:'all', 'data-turbolinks-track':'reload') %>
+
+```
+***same as***
+```
+<% =stylesheet_link_tag('application', {media:'all', 'data-turbolinks-track':'reload'}) %>
+
+```
+Here <i>application</i> is the string indicating the path to the stylesheet
+and the hash with two elements indicates the media type and tells Rails to use turbolink feature
+
+***NOTE: when hashes are last argument parenthesis are optional*** 
